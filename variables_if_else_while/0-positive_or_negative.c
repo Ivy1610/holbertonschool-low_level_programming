@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 
-gcc(int main(void))
+gcc - c(int main(void))
 {
 	int n;
 
