@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 
-int main(viod)
+gcc(int main(void))
 {
 	int n;
 
