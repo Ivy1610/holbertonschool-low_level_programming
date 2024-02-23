@@ -7,13 +7,14 @@
  */
 void print_alphabet_x10(void)
 {
-	int n;
-	char c[27] = "abcdefghijklmnopqrstuvwxyz";
+	int i, j;
+
+	for (i = 0; i < 10; i++)
 	{
-	for (n = 0; n <= 26; n++)
-	{
-		putchar(abc[n]);
-	}
-	putchar('\n');
+		for (j = 0; j < 26; j++)
+		{
+			_putchar('a' + j);
+		}
+		putchar('\n');
 	}
 }
