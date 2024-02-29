@@ -2,6 +2,7 @@
 /**
  * _puts(char *str) - prints a string followed by new line to stdout
  * @str: string to print
+ * Return: lenght
  */
 void _puts(char *str)
 {
