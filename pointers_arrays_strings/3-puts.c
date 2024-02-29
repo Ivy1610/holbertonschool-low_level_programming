@@ -1,6 +1,7 @@
 #include "main.h"
+#include <stdlib.h>
 /**
- * _puts(char *str) - prints a string followed by new line to stdout
+ * _puts - prints a string followed by new line to stdout
  * @str: string to print
  * Return: lenght
  */
