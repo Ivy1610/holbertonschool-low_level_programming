@@ -17,29 +17,38 @@ int _sqrt_recursion(int n)
 	{
 		return (n);
 	}
+	return (squareRootSearch(1, n / 2, n));
+}
+/**
+ * squareRootSearch - fonction to search for the square root recursively
+ * @i: the lower of search
+ * @j: the upper oh search
+ * @n: the number of square root searched
+ *
+ * Return: Return: Natural square root of n, or -1 if n does not have a
+ * natural square root.
+ */
+int squareRootSearch(int i, int j, int n)
+{
+	int mid;
+	int square;
+	if (i > j)
 	{
-		int i = 1;
-		int j = n / 2;
-		int mid;
-		long square;
-		
-		while (i <= j)
-		{
-			mid = (i + j) / 2;
-			square = (long)mid * mid;
-			if (square == n)
-			{
-				return (mid);
-			}
-			else if (square < n)
-			{
-				i = mid + 1;
-			}
-			else
-			{
-				j = mid - 1;
-			}
-		}
-	}
 	return (-1);
+	}
+	mid = (i + j) / 2;
+	square = (long)mid * mid;
+
+	if (square == n)
+	{
+		return (mid);
+	}
+	else if (square < n)
+	{
+		return (squareRootSearch(mid + 1, j, n));
+	}
+	else
+	{
+		return (squareRootSearch(i, mid - 1, n));
+	}
 }
