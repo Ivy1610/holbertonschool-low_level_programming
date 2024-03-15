@@ -20,12 +20,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (d == NULL)
 		return (NULL);
 
-	for (i = 1, ptr = name; *ptr; i ++)
+	for (i = 1, ptr = name; *ptr; i++)
 		ptr++;
 	d->name = malloc(i);
 	if (d->name == 0)
 	{
-		free (d);
+		free(d);
 		return (NULL);
 	}
 
