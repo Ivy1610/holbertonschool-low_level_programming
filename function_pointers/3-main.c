@@ -10,7 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int a, b, c;
+	int a, b, cal;
 	int (*operation)(int, int);
 	char *get_op;
 
@@ -20,22 +20,25 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	if (argv[2][1])
-	{
-		printf("Error\n");
-		exit(99);
-	}
-	operation = get_op_func(argv[2]);
-
-	if (operation == NULL)
-	{
-		printf("Error\n");
-		exit(99);
-	}
-
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
+	get_op = argv[2];
 
-	printf("%d\n", operation(a, b));
+	if (get_op_func(argv[2]) == NULL || arrgv[2][1] != '\0')
+	{
+		printf("Error\n");
+		exit(99);
+	}
+
+	if ((*get_op == '/' || *get_op == '%') && (*argv[3] == '0'))
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	operation = get_op_func(get_op);
+	cal = operation(a, b);
+
+	printf("%d\n", cal);
 	return (0);
 }
+
