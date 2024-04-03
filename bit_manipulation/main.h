@@ -1,7 +1,7 @@
 #ifndef _BITS_MANIP_H_
 #define _BITS_MANIP_H_
 
-#include <stddef>
+#include <stddef.h>
 
 int _putchar(char c);
 unsigned int binary_to_uint(const char *b);
